@@ -19,7 +19,9 @@ export default function CartPage() {
         if (cartCount > 0) {
           try {
             setRedirecting(true);
-            const { id } = await axios.post("/api/checkout-sessions", cartDetails);
+            const { id } = await axios
+            .post("/api/checkout-sessions", cartDetails)
+            .then((res) => res.data);
             const result = await redirectToCheckout(id);
             if (result?.error) {
               console.log("Erro no resultado", result);
