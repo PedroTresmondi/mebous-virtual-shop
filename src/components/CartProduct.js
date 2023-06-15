@@ -11,7 +11,7 @@ export default function CartProduct({ product }) {
         <div className="flex justify-between space-x-4 hover:shadow-lg 
         hover:border-opacity-50 border border-opacity-0 rounded-md p-4 bg-white">
             <Link href={`/products/${product.id}`} className="flex item-center space-x-4 group" >
-                <div className="relative w-20 h-20 group-hover:scale-150 transition-transform " >
+                <div className="relative w-20 h-20 group-hover:scale-110 transition-transform " >
                     <Image
                         src={product.image}
                         alt={product.name}
@@ -26,7 +26,7 @@ export default function CartProduct({ product }) {
                     <button
                         onClick={() => setItemQuantity(product.id, product.quantity - 1)}
                         disabled={product.quantity <= 1}
-                        className="p-1 rounded-md hover:bg-red-300 hover:text-rose-500">
+                        className="p-1 rounded-md hover:bg-gray-300 hover:text-rose-500">
                         <MinusSmallIcon className="w-6 h-6 flex-shrink-0 " />
                     </button>
                     <p className="font-semibold text-xl">
@@ -34,7 +34,7 @@ export default function CartProduct({ product }) {
                     </p>
                     <button
                         onClick={() => setItemQuantity(product.id, product.quantity + 1)}
-                        className="p-1 rounded-md hover:bg-green-300 hover:text-green-950">
+                        className="p-1 rounded-md hover:bg-gray-300 hover:text-green-300">
                         <PlusSmallIcon className="w-6 h-6 flex-shrink-0 " />
                     </button>
                 </div>
