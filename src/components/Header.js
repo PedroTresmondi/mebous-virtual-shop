@@ -19,7 +19,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 bg-white z-10 shadow-lg">
-            <div className="container mx-auto p-5 flex justify-between items-center">
+            <div className="container mx-auto p-1 flex justify-between items-center">
                 <Logo />
 
                 <Link
