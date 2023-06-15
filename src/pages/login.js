@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useSession, signIn, signOut } from 'next-auth/react';
@@ -17,10 +17,6 @@ export default function Login() {
         signIn('github');
     };
 
-    const handleAuth0Login = () => {
-        signIn('auth0');
-    };
-
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="text-center h-auto">
@@ -36,14 +32,6 @@ export default function Login() {
               ease-in-out hover:text-white font-semibold py-2 px-4 rounded-lg"
                         >
                             Continuar com GitHub
-                        </button>
-                        <button
-                            onClick={handleAuth0Login}
-                            className="bg-white border border-gray-700 border-solid
-            text-black hover:bg-gray-800 transition duration-1000
-             ease-in-out hover:text-white font-semibold py-2 px-4 rounded-lg"
-                        >
-                            Continuar com Auth0
                         </button>
                     </div>
                 </div>
