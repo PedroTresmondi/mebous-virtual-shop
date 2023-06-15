@@ -36,10 +36,8 @@ export default function SuccessPage() {
                         Obrigado pela compra!
                         <p className="text-lg" >
                             Acompanhe seu pedido pelo e-mail! ({email})
-
                         </p>
                     </h2>
-
                 </div>
             )}
         </div>

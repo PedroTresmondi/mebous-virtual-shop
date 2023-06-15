@@ -9,5 +9,13 @@ const nextConfig = {
         ]
     }
 }
+module.exports = {
+    env: {
+        FACEBOOK_ID: process.env.FACEBOOK_ID,
+        FACEBOOK_SECRET: process.env.FACEBOOK_SECRET,
+        GOOGLE_ID: process.env.GOOGLE_ID,
+        GOOGLE_SECRET: process.env.GOOGLE_SECRET,
+    },
+};
 
 module.exports = nextConfig

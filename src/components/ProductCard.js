@@ -17,8 +17,8 @@ export default function ProductCard({ product, index }) {
     return (
         <Link
             href={`/products/${product.id}`}
-            className="border-2 rounded-md group overflow-hidden">
-            <div className="relative w-full h-64" >
+            className="border-2 rounded-md group overflow-hidden shadow-lg hover:scale-110 transition-transform">
+            <div className="relative w-full h-64 p-10" >
                 <Image priority={index === 0}
                     src={product.image}
                     alt={product.name}
@@ -30,7 +30,7 @@ export default function ProductCard({ product, index }) {
                 />
             </div>
 
-            <div className="p-6 bg-white">
+            <div className="p-5 bg-white">
                 <p className="font-semibold text-lg">{product.name}</p>
                 <Rating />
                 <div className="mt-4 flex items-center justify-between space-x-2">
