@@ -38,7 +38,7 @@ export default function CartProduct({ product }) {
                         <PlusSmallIcon className="w-6 h-6 flex-shrink-0 " />
                     </button>
                 </div>
-                <p className="font-semibold text-xl ml-16" >
+                <p className="font-semibold text-xl " >
                     <XMarkIcon className="hidden w-4 h-4 text-gray-400 sm:inline-block mr-4 mb-1" />
                     {product.formattedPrice}
                 </p>
