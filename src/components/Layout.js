@@ -10,16 +10,16 @@ const inter = Inter({
 })
 
 export default function AppLayout({ children }) {
-    const { data: session, status } = useSession() 
+    // const { data: session, status } = useSession() 
 
-    if (status === 'loading') {
-        return <div>Carregando...</div> 
-    }
+    // if (status === 'loading') {
+    //     return <div>Carregando...</div> 
+    // }
 
     return (
         <div className={`${inter.variable} font-sans min-h-screen flex flex-col`}>
             <Meta />
-            {session && <Header />}
+            <Header />
             <main className="flex-grow bg-gray-50" >
                 {children}
             </main>
