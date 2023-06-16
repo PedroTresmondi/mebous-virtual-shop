@@ -9,13 +9,7 @@ import { signOut, useSession } from 'next-auth/react';
 
 export default function Header() {
     const { formattedTotalPrice, cartCount } = useShoppingCart();
-    const { data: session } = useSession();
-    const router = useRouter();
 
-    const handleSignOut = async () => {
-        await signOut();
-        router.push('/login');
-    };
 
     return (
         <header className="sticky top-0 bg-white z-10 shadow-lg">
@@ -32,21 +26,17 @@ export default function Header() {
                     <span className="text-xs text-gray-500">({cartCount})</span>
                 </Link>
 
-                {session ? (
-                    <div className="flex items-center space-x-1 col-auto flex-col align-top ml-10">
-                        <img src={session.user.image} alt={session.user.name} className="w-8 h-8 rounded-full flex-shrink-0" />
-                        <p className="text-gray-500 text-sm">{session.user.name}</p>
-                        <button
-                            onClick={handleSignOut}
-                            className="text-gray-400 hover:text-gray-900 text-sm" >
-                            Sign out
-                        </button>
-                    </div>
-                ) : (
-                    <Link href="/login">
-                        <a className="text-gray-500 hover:text-gray-900 text-sm">Sign in</a>
-                    </Link>
-                )}
+
+                {/* <div className="flex items-center space-x-1 col-auto flex-col align-top ml-10">
+                    <img src={session.user.image} alt={session.user.name} className="w-8 h-8 rounded-full flex-shrink-0" />
+                    <p className="text-gray-500 text-sm">{session.user.name}</p>
+                    <button
+                        onClick={handleSignOut}
+                        className="text-gray-400 hover:text-gray-900 text-sm" >
+                        Sign out
+                    </button>
+                </div> */}
+
             </div>
         </header>
     );

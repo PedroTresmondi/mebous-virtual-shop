@@ -7,15 +7,15 @@ import { CartProvider } from 'use-shopping-cart'
 const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 
 
-export default function App({ Component, pageProps, session}) {
+export default function App({ Component, pageProps}) {
     return (
-        <SessionProvider session={session} >
+        // <SessionProvider session={session} >
             <CartProvider stripe={stripeKey} cartMode='checkout-session' currency='BRL' >
                 <AppLayout>
                     <Component {...pageProps} />
                     <Toaster />
                 </AppLayout>
             </CartProvider>
-        </SessionProvider>
+        // </SessionProvider>
     )   
 }
